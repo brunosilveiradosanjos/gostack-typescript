@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
+require("./routes");
+var routes_1 = require("./routes");
 var app = express_1.default();
-app.get('/', function (req, res) {
-    res.json({ message: 'Hello World' });
-});
+app.get('/', routes_1.helloWorld);
 app.listen(3334);
